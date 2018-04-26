@@ -9,7 +9,9 @@ $(function() {
 		var id = $(this).index();
 
 		$('[data-tab]').hide();
-		$('[data-tab="'+id+'"]').show().jScrollPane();
+		$('[data-tab="'+id+'"]').show().jScrollPane({
+			autoReinitialise:true
+		});
 	})
 
 	$('.tabs__item').first().trigger('click');
@@ -51,4 +53,37 @@ $(function() {
 	        scrollTop: $( $.attr(this, 'data-anchor') ).offset().top
 	    }, 1500);
 	});
+
+	// Мобильная навигация
+	$('.mobile__menu').append($('.nav').clone());
+
+	$('.mobile__btn').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).parent().toggleClass('mobile_open');
+	})
+
+	// Все докладчики
+	$('.speakers__all').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).hide();
+
+		$('.speaker:not(:visible)').fadeIn();
+	});
+
+	// Карта
+	ymaps.ready(init);
+    var myMap, 
+        myPlacemark;
+
+    function init(){ 
+        myMap = new ymaps.Map("map", {
+            center: [55.077942, 82.960387],
+            zoom: 16,
+            controls: ['smallMapDefaultSet']
+        }); 
+
+        myMap.behaviors.disable('scrollZoom'); 
+    }
 });

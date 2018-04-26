@@ -2,11 +2,12 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>EcomSIB</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<!-- <meta name="viewport" content="width=1200" /> -->
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
 </head>
 <body>
 	<svg style="display: none;">
@@ -60,7 +61,14 @@
 		</symbol>
 	</svg>
 
-	<!-- <header class="header">
+	<header class="header">
+		<div class="mobile">
+			<button class="mobile__btn"></button>
+			<div class="mobile__menu">
+				<p>+7 (383) 280-80-26, вн. 1245, 6044<br>+7-913-750-81-37</p>
+				
+			</div>
+		</div>
 		<div class="header__main">
 			<div class="header__container container">
 				<div class="logo logo_header">
@@ -105,7 +113,7 @@
 				<button class="btn" data-anchor="#register">Принять участие</button>
 			</div>
 		</div>
-	</header> -->
+	</header>
 
 	<div class="wrapper">
 		<section class="section section_wel">
@@ -119,6 +127,33 @@
 				<div class="speakers">
 					<h2 class="title">Спикеры</h2>
 					<div class="speakers__list">
+						<div class="speaker">
+							<div class="speaker__photo">
+								<div class="speaker__photo-wrap">
+									<img src="img/irina.jpg" alt="">
+								</div>
+							</div>
+							<span class="speaker__name">Ирина Поддубная</span>
+							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
+						</div>
+						<div class="speaker">
+							<div class="speaker__photo">
+								<div class="speaker__photo-wrap">
+									<img src="img/irina.jpg" alt="">
+								</div>
+							</div>
+							<span class="speaker__name">Ирина Поддубная</span>
+							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
+						</div>
+						<div class="speaker">
+							<div class="speaker__photo">
+								<div class="speaker__photo-wrap">
+									<img src="img/irina.jpg" alt="">
+								</div>
+							</div>
+							<span class="speaker__name">Ирина Поддубная</span>
+							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
+						</div>
 						<div class="speaker">
 							<div class="speaker__photo">
 								<div class="speaker__photo-wrap">
@@ -511,10 +546,22 @@
 			</div>
 		</section>
 
-		<section class="section">
-			<div class="map" id="map">
-				
+		<section class="section section_map">
+			<div class="container">
+				<h2 class="title title_map">Место проведения</h2>
+				<div class="place">
+					<span class="place__caption">16 - 17 мая  2018 года</span>
+					<p>
+						Новосибирск, ул. Богдана Хмельницкого, 58, 5 этаж<br>Конференц-зал «ГК Обувь России»  
+					</p>
+					<p>
+						От остановки пл. Калинина до остановки 
+						25 лет Октября: автобусы: 27, 34, 28, 64, 97, 14; <br>
+						троллейбус: 24; маршрутное такси: 73, 30, 34.
+					</p>
+				</div>
 			</div>
+			<div class="map" id="map"></div>
 		</section>
 
 		<section class="section section_contacts" id="contacts">
@@ -572,7 +619,7 @@
 									<span>Имя</span>
 									<input type="text">
 								</div>
-								<div class="field field_half field_req field_error">
+								<div class="field field_half field_req field_error" data-error="Абракадабра!">
 									<span>Фамилия</span>
 									<input type="text">
 								</div>
@@ -596,7 +643,7 @@
 									<span>Ссылка на сайт</span>
 									<input type="text">
 								</div>
-								<div class="field field_half field_req field_error">
+								<div class="field field_half field_req field_error" data-error="Заполните данное поле!">
 									<span>Формат участия в мероприятии</span>
 									<select>
 										<option selected disabled value="0"></option>
