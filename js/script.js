@@ -93,7 +93,7 @@ $(function() {
     	var data = $(this).data('open');
 
     	$('.bg').addClass('bg_show');
-    	$('[data-modal]').addClass('modal_active');
+    	$('[data-modal="'+data+'"]').addClass('modal_active');
     });
 
     $('.bg_show, .modal__close').on('click', function(e) {
