@@ -127,7 +127,7 @@
 				<div class="speakers">
 					<h2 class="title">Спикеры</h2>
 					<div class="speakers__list">
-						<div class="speaker">
+						<div class="speaker" data-open="speakers">
 							<div class="speaker__photo">
 								<div class="speaker__photo-wrap">
 									<img src="img/irina.jpg" alt="">
@@ -136,78 +136,7 @@
 							<span class="speaker__name">Ирина Поддубная</span>
 							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
 						</div>
-						<div class="speaker">
-							<div class="speaker__photo">
-								<div class="speaker__photo-wrap">
-									<img src="img/irina.jpg" alt="">
-								</div>
-							</div>
-							<span class="speaker__name">Ирина Поддубная</span>
-							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
-						</div>
-						<div class="speaker">
-							<div class="speaker__photo">
-								<div class="speaker__photo-wrap">
-									<img src="img/irina.jpg" alt="">
-								</div>
-							</div>
-							<span class="speaker__name">Ирина Поддубная</span>
-							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
-						</div>
-						<div class="speaker">
-							<div class="speaker__photo">
-								<div class="speaker__photo-wrap">
-									<img src="img/irina.jpg" alt="">
-								</div>
-							</div>
-							<span class="speaker__name">Ирина Поддубная</span>
-							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
-						</div>
-						<div class="speaker">
-							<div class="speaker__photo">
-								<div class="speaker__photo-wrap">
-									<img src="img/irina.jpg" alt="">
-								</div>
-							</div>
-							<span class="speaker__name">Ирина Поддубная</span>
-							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
-						</div>
-						<div class="speaker">
-							<div class="speaker__photo">
-								<div class="speaker__photo-wrap">
-									<img src="img/irina.jpg" alt="">
-								</div>
-							</div>
-							<span class="speaker__name">Ирина Поддубная</span>
-							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
-						</div>
-						<div class="speaker">
-							<div class="speaker__photo">
-								<div class="speaker__photo-wrap">
-									<img src="img/irina.jpg" alt="">
-								</div>
-							</div>
-							<span class="speaker__name">Ирина Поддубная</span>
-							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
-						</div>
-						<div class="speaker">
-							<div class="speaker__photo">
-								<div class="speaker__photo-wrap">
-									<img src="img/irina.jpg" alt="">
-								</div>
-							</div>
-							<span class="speaker__name">Ирина Поддубная</span>
-							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
-						</div>
-						<div class="speaker">
-							<div class="speaker__photo">
-								<div class="speaker__photo-wrap">
-									<img src="img/irina.jpg" alt="">
-								</div>
-							</div>
-							<span class="speaker__name">Ирина Поддубная</span>
-							<span class="speaker__comp">«Сибирские сети», директор по маркетингу</span>
-						</div>
+						
 					</div>
 					<a href="#" class="link speakers__all">Все докладчики</a>
 					<button class="btn">Зарегистрироваться как спикер</button>
@@ -405,7 +334,43 @@
 								</div>
 							</div>
 							<div class="timetable" data-tab="1">
-								321
+								<div class="timetable__event">
+									<div class="timetable__time">
+										<span>08:30 – 09:30</span>
+									</div>
+									<div class="timetable__text">
+										<p>Регистрация, welcome-кофе.  ( Холл 1-го этажа, зона гардероба)</p>
+									</div>
+								</div>
+								<div class="timetable__event">
+									<div class="timetable__time">
+										<span>08:30 – 09:30</span>
+									</div>
+									<div class="timetable__text timetable__text_blocks">
+										<div class="timetable__block">
+											<p>Регистрация, welcome-кофе.  ( Холл 1-го этажа, зона гардероба)</p>
+										</div>
+										<div class="timetable__block">
+											<p>Регистрация, welcome-кофе.  ( Холл 1-го этажа, зона гардероба)</p>
+										</div>
+									</div>
+								</div>
+								<div class="timetable__event">
+									<div class="timetable__time">
+										<span>08:30 – 09:30</span>
+									</div>
+									<div class="timetable__text timetable__text_blocks">
+										<div class="timetable__block">
+											<p>Регистрация, welcome-кофе.  ( Холл 1-го этажа, зона гардероба)</p>
+										</div>
+										<div class="timetable__block">
+											<p>Регистрация, welcome-кофе.  ( Холл 1-го этажа, зона гардероба)</p>
+										</div>
+										<div class="timetable__block">
+											<p><b>Регистрация, welcome-кофе.  ( Холл 1-го этажа, зона гардероба)</b></p>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -707,7 +672,32 @@
 			</p>
 		</div>
 	</footer>
-
+	
+	<div class="bg">
+		<div class="modal" data-modal="speakers">
+			<button class="modal__close"></button>
+			<div class="modal__content">
+				<div class="personally">
+					<div class="personally__photo">
+						<img src="img/irina.jpg" alt="">
+					</div>
+					<div class="personally__info">
+						<span class="personally__name">Ирина Поддубная</span>
+						<div class="personally__content">
+							<p>
+							тут текст текст текст текст текст текст текст текст текст текст
+							 текст текст текст текст текст текст текст текст текст текст текст текст
+							  текст текстм текст текст текст текст текст текст текст текст текст текст
+							   текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+							тут текст текст текст текст текст текст текст текст текст текст
+	
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="js/divbs.js"></script>
 	<script src="js/script.js"></script>

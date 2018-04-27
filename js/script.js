@@ -1,4 +1,3 @@
-
 $(function() {
 
 	// Табы
@@ -86,4 +85,27 @@ $(function() {
 
         myMap.behaviors.disable('scrollZoom'); 
     }
+
+    // Модалка
+    $('[data-open]').on('click', function(e) {
+    	e.preventDefault();
+
+    	var data = $(this).data('open');
+
+    	$('.bg').addClass('bg_show');
+    	$('[data-modal]').addClass('modal_active');
+    });
+
+    $('.bg_show, .modal__close').on('click', function(e) {
+    	e.preventDefault();
+
+    	$('.bg_show').removeClass('bg_show');
+    	$('.modal_active').removeClass('modal_active');
+
+
+    });
+
+    $('.personally__content').jScrollPane({
+			autoReinitialise:true
+	});;
 });
